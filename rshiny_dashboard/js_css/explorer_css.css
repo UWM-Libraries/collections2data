@@ -1,0 +1,267 @@
+.tittel {
+  font-size: 18px;
+}
+
+.boxed_doc_data_365,
+.boxed_doc_data_dok {
+  border: 1px solid LightGray;
+  border-radius: 1px;
+  padding: 10px;
+  overflow: scroll;
+  font-size: 1em;
+  font-family: "Verdana", sans-serif;
+}
+
+.boxed_doc_data_365 {
+  height: calc(100vh - 300px);
+}
+
+.boxed_doc_data_dok {
+  height: calc(100vh - 200px);
+}
+
+#highlight_terms_area,
+#filter_text_area {
+  padding-left:10px;
+  padding-top: 10px;
+  padding-right:10px;
+  margin-top:-2em;
+  resize: vertical;
+  background-color: white;
+  min-height: 40px;
+}
+
+#magic_text_area,
+#magic_search_area {
+  padding-left:10px;
+  padding-top: 10px;
+  padding-right:10px;
+  /*margin-top:-2em;*/
+  resize: vertical;
+  background-color: white;
+  min-height: 40px;
+  margin-bottom: -1em;
+}
+
+.magic_search {
+  margin-top: -1em;
+}
+
+/*https://stackoverflow.com/a/32506173/8399819*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    -webkit-transition: color 9999s ease-out, background-color 9999s ease-out;
+}
+
+#search_text_1 {
+  padding-left:10px;
+  padding-top: 10px;
+  padding-right:10px;
+  padding-bottom:10px;
+  margin-bottom:-1em;
+  margin-top: 0em;
+  resize: none;
+  /*font-size:10px;*/
+  height:25px;
+  color: white;
+  display: none;
+}
+
+#search_text_2,
+#search_text_3,
+#search_text_4,
+#search_text_5,
+#search_text_6 {
+  padding-left:10px;
+  padding-top: 10px;
+  padding-right:10px;
+  padding-bottom:10px;
+  margin-top:-1em;
+  margin-bottom:-1em;
+  resize: none;
+  height:25px;
+  color: white;
+}
+
+#search_button {
+  /*margin-left:1em;
+  margin-right:1em;*/
+  width: 87%;
+  background-color: white;
+  color: red;
+  margin-top: 1em;
+}
+
+#size_button {
+  width: 87%;
+  margin-top: -0.5em;
+}
+
+/*Denne er for scrolling og beholde høyreboksen konstant.
+https://stackoverflow.com/questions/11399537/how-do-you-make-a-div-follow-as-you-scroll*/
+
+.class_day_corpus .nav-tabs-custom {
+    position: fixed;
+    top: 60px;
+    margin-right: 10px;
+    display:none;
+}
+
+.class_doc_box .nav-tabs-custom {
+    position: fixed;
+    margin-right: 10px;
+    bottom: 0;
+    overflow: scroll;
+    display:none;
+}
+
+/*
+To enable day and doc boxes to move under corpus map if resizing or
+on small screen + avoid "double navbar" on small screen by removing
+logo element
+*/
+
+@media (max-width:768px){
+  .class_doc_box .nav-tabs-custom,
+  .class_day_corpus .nav-tabs-custom,
+  .class_doc_box {
+    position:static;
+  }
+}
+
+@media (max-width:768px){
+  .skin-blue .main-header .logo {
+  display:none;
+  }
+}
+
+/*
+To keep tab box "nav bars" white also when boxes moved under corpus map
+due to resizing
+*/
+.nav-tabs {
+  background-color: white;
+}
+
+
+#dag_kart {
+  max-height: 200px;
+  overflow: scroll;
+}
+
+
+/*De tre neste er for locked header og sidebar.
+https://stackoverflow.com/questions/41240878/r-shiny-fixed-sidebar-and-main-header-in-a-shiny-dashboard*/
+
+.sidebar {
+  color: #FFF;
+  position: fixed;
+  width: 220px;
+  white-space: nowrap;
+  overflow-y: auto;
+  top: 50px;
+  bottom: 0;
+}
+
+.dropdownsettings {
+  color: blue;
+  width: 100%;
+  font-size: 40px;
+}
+
+.main-header {
+  position: fixed;
+  width:100%;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+/*Fordi det viste seg at jeg hoppet ca. en linje for langt i dokumentvisning fra dok_vis.
+Jeg har hacka litt fra denne. Må kanskje justeres, men dette er nok prinsippet.
+https://stackoverflow.com/a/20358308/8399819*/
+span.___{
+  /*display: block;*/
+  position: relative;
+  top: -20px;
+  visibility: hidden;
+  }
+
+.plotsize_field,
+.subset_field,
+.more_terms_field,
+.additional_search_terms {
+  display: none;
+}
+
+.btn-group {
+  margin-bottom: 0em;
+}
+
+hr {
+  margin-bottom: 0em;
+  margin-top: 1em;
+}
+
+#more_terms_button .btn-default {
+  font-size: 11px;
+}
+
+#update_info_plot_legend_keys {
+  /*margin-left:1em;
+  margin-right:1em;*/
+  background-color: lightGray;
+  color: black;
+  margin-top: 1em;
+}
+
+.text_in_box {
+  width: 300px;
+  /*border: 1px solid black;*/
+  padding: 3px;
+  margin-top: -17px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+  margin-left: -50px;
+  font-size: 13px;
+}
+
+/*The next 4 are for custom ui filtering columns
+checkboxes
+TODO tweaking*/
+
+.btn-group_ui {
+  margin-top:-1em;
+  background-color: rgb(230, 230, 230);
+  color: rgb(51, 51, 51);
+}
+
+.filtering_checkboxes {
+  margin-top: -1.5em;
+  margin-bottom: -1em;
+  font-size: 0.8em;
+  overflow: auto;
+}
+
+.checkbox-inline {
+  margin-left: 0;
+  margin-right: 0.3em;
+}
+
+.checkbox-inline+.checkbox-inline {
+  margin-left: 0;
+  margin-right: 0.3em;
+}
+
+.recalculating {opacity: 0;}
+
+.progress_text {
+  position: fixed;
+  font-size: 1em;
+  text-align: center;
+  display: none;
+}
